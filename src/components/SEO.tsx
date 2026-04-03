@@ -5,25 +5,21 @@ import { useI18n, type Language } from '@/i18n/I18nContext';
 const seoData: Record<Language, {
   title: string;
   description: string;
-  keywords: string;
   ogLocale: string;
 }> = {
   ru: {
     title: 'Toyger Stories — Кошки породы Тойгер: характер, фото, информация о породе',
     description: 'Toyger Stories — персональная страница о кошках породы Тойгер. Узнайте о характере Тойгера, посмотрите галерею фотографий, прочитайте интересные факты о породе, напоминающей миниатюрного тигра.',
-    keywords: 'Toyger, Тойгер, кошка Тойгер, порода Тойгер, характер Тойгер, Тойгер фото, котята Тойгер, тигровая кошка, домашний тигр',
     ogLocale: 'ru_RU',
   },
   en: {
     title: 'Toyger Stories — Toyger Cat Breed: Character, Photos, Breed Information',
     description: 'Toyger Stories — a personal page about Toyger cats. Discover the Toyger character, browse our photo gallery, and learn fascinating facts about the breed that resembles a miniature tiger.',
-    keywords: 'Toyger, Toyger cat, Toyger breed, Toyger character, Toyger photos, Toyger kittens, tiger cat, domestic tiger, Toyger temperament',
     ogLocale: 'en_US',
   },
   ukr: {
     title: 'Toyger Stories — Кішки породи Тойгер: характер, фото, інформація про породу',
     description: 'Toyger Stories — персональна сторінка про кішок породи Тойгер. Дізнайтеся про характер Тойгера, перегляньте галерею фотографій, прочитайте цікаві факти про породу, схожу на мініатюрного тигра.',
-    keywords: 'Toyger, Тойгер, кішка Тойгер, порода Тойгер, характер Тойгер, Тойгер фото, кошенята Тойгер, тигрова кішка, домашній тигр',
     ogLocale: 'uk_UA',
   },
 };
@@ -41,7 +37,7 @@ function getBaseUrl(): string {
   return 'https://toyger-stories.netlify.app';
 }
 
-// Structured Data for WebSite
+// Structured Data for WebSite (no SearchAction - site has no search functionality)
 function getWebSiteSchema(lang: Language) {
   const data = seoData[lang];
   return {
@@ -52,14 +48,6 @@ function getWebSiteSchema(lang: Language) {
     url: getBaseUrl(),
     description: data.description,
     inLanguage: hreflangMap[lang],
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${getBaseUrl()}/?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 
@@ -115,40 +103,6 @@ function getFAQSchema(lang: Language) {
   };
 }
 
-// Structured Data for BreadcrumbList
-function getBreadcrumbSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: getBaseUrl(),
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Gallery',
-        item: `${getBaseUrl()}/#gallery`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'About the Breed',
-        item: `${getBaseUrl()}/#breed`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'FAQ',
-        item: `${getBaseUrl()}/#faq`,
-      },
-    ],
-  };
-}
-
 // Update meta tag helper
 function updateMetaTag(name: string, content: string, attribute = 'name') {
   let tag = document.querySelector(`meta[${attribute}="${name}"]`);
@@ -201,17 +155,13 @@ export function SEO() {
 
     // Basic meta tags
     updateMetaTag('description', data.description);
-    updateMetaTag('keywords', data.keywords);
     updateMetaTag('author', 'Toyger Stories');
     updateMetaTag('robots', 'index, follow, max-image-preview:large, max-snippet:-1');
 
     // Canonical URL
     updateLinkTag('canonical', baseUrl);
 
-    // hreflang tags for all languages
-    updateLinkTag('alternate', baseUrl, 'ru');
-    updateLinkTag('alternate', baseUrl, 'en');
-    updateLinkTag('alternate', baseUrl, 'uk');
+    // hreflang: x-default only (single URL serves all languages via client-side switching)
     updateLinkTag('alternate', baseUrl, 'x-default');
 
     // Open Graph tags
@@ -233,11 +183,10 @@ export function SEO() {
     updateMetaTag('twitter:image', `${baseUrl}/images/0E0BA451-F411-4F09-AF9B-D16A2B117F0F.jpg`, 'name');
     updateMetaTag('twitter:image:alt', 'Toyger cat with distinctive tiger-like stripes', 'name');
 
-    // Structured Data
+    // Structured Data (WebSite, ImageGallery, FAQPage - no BreadcrumbList for hash-based navigation)
     updateJsonLd('schema-website', getWebSiteSchema(language));
     updateJsonLd('schema-gallery', getImageGallerySchema());
     updateJsonLd('schema-faq', getFAQSchema(language));
-    updateJsonLd('schema-breadcrumb', getBreadcrumbSchema());
 
   }, [language, data, baseUrl]);
 
