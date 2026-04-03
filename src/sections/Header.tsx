@@ -61,7 +61,7 @@ export function Header() {
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="font-body text-sm text-foreground/80 hover:text-foreground transition-colors header-nav-link"
             >
               {item.label}
             </button>
@@ -71,7 +71,7 @@ export function Header() {
         {/* Controls */}
         <div className="flex items-center gap-3">
           {/* Language Switcher */}
-          <div className="hidden sm:flex items-center gap-1 bg-secondary/50 rounded-full p-1">
+          <div className="hidden sm:flex items-center gap-1 bg-background/60 backdrop-blur-sm rounded-full p-1 header-lang-switcher">
             {languages.map((lang) => (
               <button
                 key={lang.code}
@@ -79,7 +79,7 @@ export function Header() {
                 className={`px-3 py-1 text-xs font-body rounded-full transition-all ${
                   language === lang.code
                     ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
+                    : 'text-foreground/70 hover:text-foreground'
                 }`}
               >
                 {lang.label}
@@ -90,13 +90,13 @@ export function Header() {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-secondary transition-colors"
+            className="p-2.5 rounded-full bg-background/60 backdrop-blur-sm hover:bg-background/80 transition-all header-theme-toggle"
             aria-label="Toggle theme"
           >
             {theme === 'light' ? (
-              <Moon size={18} className="text-muted-foreground" />
+              <Moon size={18} className="text-foreground/80" />
             ) : (
-              <Sun size={18} className="text-muted-foreground" />
+              <Sun size={18} className="text-foreground/80" />
             )}
           </button>
 
