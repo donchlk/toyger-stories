@@ -111,9 +111,9 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Apple-style glass effect */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background backdrop-blur-xl border-t border-border py-6 px-6 shadow-lg">
+        <div className="lg:hidden absolute top-full left-0 right-0 mobile-menu-glass py-6 px-6">
           {/* Mobile Language Switcher */}
           <div className="flex sm:hidden items-center gap-2 mb-6">
             {languages.map((lang) => (
@@ -122,8 +122,8 @@ export function Header() {
                 onClick={() => setLanguage(lang.code)}
                 className={`px-4 py-2 text-sm font-body font-medium rounded-full transition-all ${
                   language === lang.code
-                    ? 'bg-secondary text-foreground'
-                    : 'text-foreground/70 hover:text-foreground'
+                    ? 'bg-white/30 dark:bg-white/20 text-foreground shadow-sm backdrop-blur-sm'
+                    : 'text-foreground/80 hover:text-foreground hover:bg-white/10'
                 }`}
               >
                 {lang.label}
@@ -131,12 +131,12 @@ export function Header() {
             ))}
           </div>
 
-          <nav className="flex flex-col gap-4">
+          <nav className="flex flex-col gap-3">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="font-body text-left text-foreground font-medium hover:text-foreground/70 transition-colors py-2"
+                className="font-body text-left text-foreground font-medium hover:text-foreground/70 transition-colors py-2.5 px-3 rounded-xl hover:bg-white/10"
               >
                 {item.label}
               </button>

@@ -280,3 +280,22 @@
 .dark .header-hero-overlay .header-theme-toggle:hover {
   background: hsl(var(--background) / 0.7);
 }
+
+/* Mobile Menu - Apple-style glass effect */
+.mobile-menu-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.dark .mobile-menu-glass {
+  background: rgba(20, 18, 16, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
