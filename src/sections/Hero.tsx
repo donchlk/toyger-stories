@@ -25,14 +25,17 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-20">
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6 hero-title">
+      <div className="relative z-10 text-center px-6 max-w-2xl mx-auto pt-24">
+        {/* Local readability backdrop - soft vignette behind text only */}
+        <div className="absolute inset-0 -mx-8 -my-6 rounded-3xl bg-gradient-to-b from-black/20 via-black/15 to-black/10 dark:from-transparent dark:via-transparent dark:to-transparent blur-xl scale-110 hero-content-backdrop" />
+        
+        <h1 className="relative font-display text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6 hero-title">
           {t('hero.title') as string}
         </h1>
-        <p className="font-body text-base sm:text-lg leading-relaxed mb-10 max-w-xl mx-auto hero-subtitle">
+        <p className="relative font-body text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto hero-subtitle">
           {t('hero.subtitle') as string}
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => scrollTo('gallery')}
             className="px-8 py-3 bg-foreground text-background font-body text-sm rounded-full hover:opacity-80 transition-opacity hero-btn-primary"
@@ -41,7 +44,7 @@ export function Hero() {
           </button>
           <button
             onClick={() => scrollTo('about')}
-            className="px-8 py-3 border border-foreground/40 text-foreground font-body text-sm rounded-full hover:bg-foreground/10 transition-colors hero-btn-secondary"
+            className="px-8 py-3 border-2 border-foreground/50 text-foreground font-body text-sm font-medium rounded-full hover:bg-foreground/10 transition-colors hero-btn-secondary"
           >
             {t('hero.ctaAbout') as string}
           </button>
