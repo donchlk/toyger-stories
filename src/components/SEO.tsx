@@ -37,11 +37,8 @@ const hreflangMap: Record<Language, string> = {
 
 // Get base URL for canonical/hreflang
 function getBaseUrl(): string {
-  if (typeof window === 'undefined') return 'https://donchlk.github.io/toyger-stories';
-  const isGitHubPages = window.location.hostname.includes('github.io');
-  return isGitHubPages 
-    ? 'https://donchlk.github.io/toyger-stories'
-    : window.location.origin;
+  // Production domain for all SEO signals
+  return 'https://toyger-stories.netlify.app';
 }
 
 // Structured Data for WebSite

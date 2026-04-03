@@ -11,6 +11,15 @@
     <meta name="author" content="Toyger Stories" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://toyger-stories.netlify.app/" />
+    
+    <!-- hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="ru" href="https://toyger-stories.netlify.app/" />
+    <link rel="alternate" hreflang="en" href="https://toyger-stories.netlify.app/" />
+    <link rel="alternate" hreflang="uk" href="https://toyger-stories.netlify.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://toyger-stories.netlify.app/" />
+    
     <!-- Theme & Icons -->
     <meta name="theme-color" content="#f5f0eb" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1a1614" media="(prefers-color-scheme: dark)" />
@@ -19,13 +28,24 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://toyger-stories.netlify.app/" />
+    <meta property="og:title" content="Toyger Stories — Кошки породы Тойгер" />
+    <meta property="og:description" content="Персональная страница о кошках породы Тойгер. Узнайте о характере Тойгера, посмотрите галерею фотографий, прочитайте интересные факты о породе." />
+    <meta property="og:image" content="https://toyger-stories.netlify.app/images/0E0BA451-F411-4F09-AF9B-D16A2B117F0F.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Toyger cat with distinctive tiger-like stripes" />
     <meta property="og:site_name" content="Toyger Stories" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="uk_UA" />
     
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Toyger Stories — Кошки породы Тойгер" />
+    <meta name="twitter:description" content="Персональная страница о кошках породы Тойгер. Характер, фото, информация о породе." />
+    <meta name="twitter:image" content="https://toyger-stories.netlify.app/images/0E0BA451-F411-4F09-AF9B-D16A2B117F0F.jpg" />
+    <meta name="twitter:image:alt" content="Toyger cat with distinctive tiger-like stripes" />
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,6 +53,121 @@
     
     <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    
+    <!-- JSON-LD Structured Data (static for crawlers) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Toyger Stories",
+      "alternateName": ["Тойгер Stories", "Toyger Cats"],
+      "url": "https://toyger-stories.netlify.app",
+      "description": "Персональная страница о кошках породы Тойгер. Характер, фото, информация о породе.",
+      "inLanguage": ["ru", "en", "uk"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://toyger-stories.netlify.app/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Toyger Cat Photo Gallery",
+      "description": "A curated collection of Toyger cat photographs showcasing the breed's distinctive tiger-like appearance.",
+      "url": "https://toyger-stories.netlify.app/#gallery",
+      "about": {
+        "@type": "Thing",
+        "name": "Toyger",
+        "description": "A domestic cat breed developed to resemble a tiger, with bold vertical stripes on a warm orange background."
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что делает Toyger особенной породой?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Toyger — одна из немногих пород, целенаправленно созданных для визуального сходства с тигром. При этом это полностью домашняя кошка с мягким и общительным характером."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Правда ли, что Toyger похож на тигра?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, это главная визуальная идея породы. Яркие вертикальные полосы на тёплом фоне, мускулистое тело и выразительная морда создают узнаваемое сходство."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какой у Toyger характер?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Как правило — дружелюбный, общительный и любознательный. Toyger ориентирован на людей, любит внимание и легко встраивается в ритм жизни семьи."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Подходит ли Toyger для жизни в квартире?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. При наличии достаточного пространства, игрушек и внимания Toyger прекрасно себя чувствует в квартире."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нуждается ли Toyger в особом уходе?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Шерсть Toyger короткая и не требует сложного ухода. Регулярное расчёсывание, сбалансированное питание и стандартный ветеринарный контроль — всё, что нужно."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://toyger-stories.netlify.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gallery",
+          "item": "https://toyger-stories.netlify.app/#gallery"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "About the Breed",
+          "item": "https://toyger-stories.netlify.app/#breed"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "FAQ",
+          "item": "https://toyger-stories.netlify.app/#faq"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
