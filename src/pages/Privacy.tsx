@@ -1,8 +1,29 @@
 import { ArrowLeft } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nContext';
+import { usePageSEO } from '@/hooks/usePageSEO';
+
+// Page-specific SEO configuration
+const privacySEO = {
+  path: '/privacy',
+  title: {
+    ru: 'Datenschutz — Toyger Stories | Политика конфиденциальности',
+    en: 'Privacy Policy — Toyger Stories | Data Protection',
+    ukr: 'Datenschutz — Toyger Stories | Політика конфіденційності',
+  },
+  description: {
+    ru: 'Политика конфиденциальности Toyger Stories. Информация о сборе, обработке и защите персональных данных в соответствии с GDPR/DSGVO.',
+    en: 'Privacy policy for Toyger Stories. Information about the collection, processing, and protection of personal data in accordance with GDPR.',
+    ukr: 'Політика конфіденційності Toyger Stories. Інформація про збір, обробку та захист персональних даних відповідно до GDPR/DSGVO.',
+  },
+  includeImage: false,
+  structuredData: null,
+};
 
 export function Privacy() {
   const { t } = useI18n();
+  
+  // Apply page-specific SEO
+  usePageSEO(privacySEO);
 
   return (
     <div className="min-h-screen bg-background">

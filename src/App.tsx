@@ -30,6 +30,7 @@ const basename = window.location.pathname.startsWith('/toyger-stories') ? '/toyg
 function HomePage() {
   return (
     <>
+      <SEO />
       <Header />
       <main>
         <Hero />
@@ -59,7 +60,6 @@ function App() {
   return (
     <I18nProvider>
       <ThemeProvider>
-        <SEO />
         <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<HomePage />} />

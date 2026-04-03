@@ -1,8 +1,29 @@
 import { ArrowLeft } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nContext';
+import { usePageSEO } from '@/hooks/usePageSEO';
+
+// Page-specific SEO configuration
+const impressumSEO = {
+  path: '/impressum',
+  title: {
+    ru: 'Impressum — Toyger Stories | Правовая информация',
+    en: 'Impressum — Toyger Stories | Legal Notice',
+    ukr: 'Impressum — Toyger Stories | Правова інформація',
+  },
+  description: {
+    ru: 'Impressum (выходные данные) сайта Toyger Stories. Информация об операторе сайта, контактные данные и правовые указания согласно законодательству.',
+    en: 'Legal notice (Impressum) for Toyger Stories website. Information about the website operator, contact details, and legal notices as required by law.',
+    ukr: 'Impressum (вихідні дані) сайту Toyger Stories. Інформація про оператора сайту, контактні дані та правові вказівки відповідно до законодавства.',
+  },
+  includeImage: false,
+  structuredData: null,
+};
 
 export function Impressum() {
   const { t } = useI18n();
+  
+  // Apply page-specific SEO
+  usePageSEO(impressumSEO);
 
   return (
     <div className="min-h-screen bg-background">
