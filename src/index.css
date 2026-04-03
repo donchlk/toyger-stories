@@ -149,3 +149,59 @@
   background: hsl(var(--primary) / 0.2);
   color: hsl(var(--foreground));
 }
+
+/* Hero Light Mode readability improvements */
+.hero-title {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.hero-subtitle {
+  color: hsl(var(--foreground));
+  opacity: 0.85;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.hero-btn-secondary {
+  backdrop-filter: blur(4px);
+  background: hsl(var(--background) / 0.3);
+}
+
+.hero-scroll-indicator {
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.3));
+}
+
+/* Dark mode: remove light mode specific shadows */
+.dark .hero-title {
+  text-shadow: none;
+}
+
+.dark .hero-subtitle {
+  color: hsl(var(--muted-foreground));
+  opacity: 1;
+  text-shadow: none;
+}
+
+.dark .hero-btn-secondary {
+  backdrop-filter: none;
+  background: transparent;
+}
+
+.dark .hero-scroll-indicator {
+  filter: none;
+}
+
+/* Header over Hero - Light Mode readability */
+.header-hero-overlay {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.header-hero-overlay button,
+.header-hero-overlay nav button {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.dark .header-hero-overlay,
+.dark .header-hero-overlay button,
+.dark .header-hero-overlay nav button {
+  text-shadow: none;
+}

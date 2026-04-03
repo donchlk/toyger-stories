@@ -18,27 +18,30 @@ export function Hero() {
           alt="Toyger cat"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
+        {/* Light mode: subtle warm dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-transparent dark:from-transparent dark:via-transparent dark:to-transparent" />
+        {/* Theme-aware gradient to background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-20">
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6 hero-title">
           {t('hero.title') as string}
         </h1>
-        <p className="font-body text-base sm:text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl mx-auto">
+        <p className="font-body text-base sm:text-lg leading-relaxed mb-10 max-w-xl mx-auto hero-subtitle">
           {t('hero.subtitle') as string}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => scrollTo('gallery')}
-            className="px-8 py-3 bg-foreground text-background font-body text-sm rounded-full hover:opacity-80 transition-opacity"
+            className="px-8 py-3 bg-foreground text-background font-body text-sm rounded-full hover:opacity-80 transition-opacity hero-btn-primary"
           >
             {t('hero.ctaGallery') as string}
           </button>
           <button
             onClick={() => scrollTo('about')}
-            className="px-8 py-3 border border-foreground/20 text-foreground font-body text-sm rounded-full hover:bg-foreground/5 transition-colors"
+            className="px-8 py-3 border border-foreground/40 text-foreground font-body text-sm rounded-full hover:bg-foreground/10 transition-colors hero-btn-secondary"
           >
             {t('hero.ctaAbout') as string}
           </button>
@@ -48,7 +51,7 @@ export function Hero() {
       {/* Scroll Indicator */}
       <button
         onClick={() => scrollTo('about')}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/60 hover:text-foreground transition-colors animate-bounce hero-scroll-indicator"
         aria-label="Scroll down"
       >
         <ChevronDown size={24} />
