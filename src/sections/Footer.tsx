@@ -78,13 +78,13 @@ export function Footer() {
                 href="/impressum"
                 className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Impressum
+                {t('impressum.title') as string}
               </a>
               <a
                 href="/privacy"
                 className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Datenschutz
+                {t('privacy.title') as string}
               </a>
             </nav>
           </div>

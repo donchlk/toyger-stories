@@ -1,6 +1,9 @@
 import { ArrowLeft } from 'lucide-react';
+import { useI18n } from '@/i18n/I18nContext';
 
 export function Impressum() {
+  const { t } = useI18n();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -11,7 +14,7 @@ export function Impressum() {
             className="inline-flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft size={18} />
-            Zur Startseite
+            {t('legal.backToHome') as string}
           </a>
         </div>
       </header>
@@ -20,114 +23,103 @@ export function Impressum() {
       <main className="py-16 px-6">
         <article className="max-w-2xl mx-auto">
           <h1 className="font-display text-3xl sm:text-4xl text-foreground mb-10">
-            Impressum
+            {t('impressum.title') as string}
           </h1>
 
           <div className="space-y-10 font-body text-foreground leading-relaxed">
             
-            {/* Anbieter */}
+            {/* Section 1: Provider Info */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                Angaben gemäß § 5 DDG
+                {t('impressum.section1Title') as string}
               </h2>
               <address className="not-italic space-y-1">
                 <p className="text-muted-foreground italic">
-                  [BITTE ERGÄNZEN: Vor- und Nachname]
+                  {t('impressum.section1Placeholder1') as string}
                 </p>
                 <p className="text-muted-foreground italic">
-                  [BITTE ERGÄNZEN: Straße und Hausnummer]
+                  {t('impressum.section1Placeholder2') as string}
                 </p>
                 <p className="text-muted-foreground italic">
-                  [BITTE ERGÄNZEN: PLZ und Ort]
+                  {t('impressum.section1Placeholder3') as string}
                 </p>
               </address>
             </section>
 
-            {/* Kontakt */}
+            {/* Section 2: Contact */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                Kontakt
+                {t('impressum.section2Title') as string}
               </h2>
               <div className="space-y-1">
                 <p>
-                  E-Mail:{' '}
+                  {t('impressum.section2Email') as string}{' '}
                   <span className="text-muted-foreground italic">
-                    [BITTE ERGÄNZEN: E-Mail-Adresse]
+                    {t('impressum.section2Placeholder') as string}
                   </span>
                 </p>
               </div>
             </section>
 
-            {/* Hinweis zur Website */}
+            {/* Section 3: Website Info */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                Hinweise zur Website
+                {t('impressum.section3Title') as string}
               </h2>
               <p className="text-muted-foreground">
-                Diese Website ist eine private, nicht-kommerzielle Seite über Katzen 
-                der Rasse Toyger. Es werden keine Waren oder Dienstleistungen angeboten, 
-                keine Mitgliedschaften abgeschlossen und kein wirtschaftlicher 
-                Geschäftsbetrieb ausgeübt.
+                {t('impressum.section3Text') as string}
               </p>
             </section>
 
-            {/* Redaktionelle Verantwortung */}
+            {/* Section 4: Content Responsibility */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                Verantwortlich für den Inhalt
+                {t('impressum.section4Title') as string}
               </h2>
               <p className="text-muted-foreground italic">
-                [BITTE ERGÄNZEN: Vor- und Nachname, Anschrift – falls abweichend von oben]
+                {t('impressum.section4Placeholder') as string}
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                (Angabe gemäß § 18 Abs. 2 MStV, sofern journalistisch-redaktionelle 
-                Inhalte vorliegen.)
+                {t('impressum.section4Note') as string}
               </p>
             </section>
 
-            {/* Haftungshinweis */}
+            {/* Section 5: Content Liability */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                Haftung für Inhalte
+                {t('impressum.section5Title') as string}
               </h2>
               <p className="text-muted-foreground">
-                Die Inhalte dieser Seite wurden mit Sorgfalt erstellt. Für die 
-                Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann 
-                jedoch keine Gewähr übernommen werden.
+                {t('impressum.section5Text') as string}
               </p>
             </section>
 
-            {/* Haftung für Links */}
+            {/* Section 6: Links Liability */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                Haftung für Links
+                {t('impressum.section6Title') as string}
               </h2>
               <p className="text-muted-foreground">
-                Diese Website enthält Links zu externen Websites Dritter, auf 
-                deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten 
-                Seiten ist stets der jeweilige Anbieter verantwortlich.
+                {t('impressum.section6Text') as string}
               </p>
             </section>
 
-            {/* Urheberrecht */}
+            {/* Section 7: Copyright */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                Urheberrecht
+                {t('impressum.section7Title') as string}
               </h2>
               <p className="text-muted-foreground">
-                Die durch den Seitenbetreiber erstellten Inhalte und Werke auf 
-                dieser Website unterliegen dem deutschen Urheberrecht. Soweit die 
-                Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden 
-                die Urheberrechte Dritter beachtet.
+                {t('impressum.section7Text') as string}
               </p>
             </section>
 
           </div>
 
-          {/* Footer-Hinweis */}
+          {/* Footer */}
           <div className="mt-16 pt-8 border-t border-border/50">
             <p className="font-body text-sm text-muted-foreground">
-              Stand: April 2026
+              {t('legal.lastUpdated') as string} April 2026
             </p>
           </div>
         </article>

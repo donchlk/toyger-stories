@@ -1,6 +1,9 @@
 import { ArrowLeft } from 'lucide-react';
+import { useI18n } from '@/i18n/I18nContext';
 
 export function Privacy() {
+  const { t } = useI18n();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -11,7 +14,7 @@ export function Privacy() {
             className="inline-flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft size={18} />
-            Zur Startseite
+            {t('legal.backToHome') as string}
           </a>
         </div>
       </header>
@@ -20,215 +23,190 @@ export function Privacy() {
       <main className="py-16 px-6">
         <article className="max-w-2xl mx-auto">
           <h1 className="font-display text-3xl sm:text-4xl text-foreground mb-10">
-            Datenschutzerklärung
+            {t('privacy.title') as string}
           </h1>
 
           <div className="space-y-10 font-body text-foreground leading-relaxed">
 
-            {/* Verantwortlicher */}
+            {/* Section 1: Controller */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                1. Verantwortlicher
+                {t('privacy.section1Title') as string}
               </h2>
               <p className="text-muted-foreground mb-2">
-                Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+                {t('privacy.section1Intro') as string}
               </p>
               <address className="not-italic text-muted-foreground italic">
-                <p>[BITTE ERGÄNZEN: Vor- und Nachname]</p>
-                <p>[BITTE ERGÄNZEN: Anschrift]</p>
-                <p>E-Mail: [BITTE ERGÄNZEN: E-Mail-Adresse]</p>
+                <p>{t('privacy.section1Placeholder1') as string}</p>
+                <p>{t('privacy.section1Placeholder2') as string}</p>
+                <p>{t('privacy.section1Placeholder3') as string}</p>
               </address>
             </section>
 
-            {/* Überblick */}
+            {/* Section 2: Overview */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                2. Allgemeines zur Datenverarbeitung
+                {t('privacy.section2Title') as string}
               </h2>
               <p className="text-muted-foreground">
-                Diese Website ist eine private, nicht-kommerzielle Seite. Die 
-                Datenverarbeitung beschränkt sich auf das technisch Notwendige. 
-                Es werden <strong>keine Analyse-Tools, kein Tracking und keine 
-                Werbung</strong> eingesetzt.
+                {t('privacy.section2Text') as string}
               </p>
             </section>
 
-            {/* Hosting */}
+            {/* Section 3: Hosting */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                3. Hosting und Server-Logfiles
+                {t('privacy.section3Title') as string}
               </h2>
               <p className="text-muted-foreground mb-4">
-                Diese Website wird bei <strong>Netlify, Inc.</strong> (USA) gehostet. 
-                Bei jedem Zugriff werden vom Hosting-Anbieter automatisch 
-                Informationen erfasst, sogenannte Server-Logfiles:
+                {t('privacy.section3Text1') as string}
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4">
-                <li>IP-Adresse des zugreifenden Geräts</li>
-                <li>Datum und Uhrzeit des Zugriffs</li>
-                <li>Aufgerufene Seiten und Dateien</li>
-                <li>Browsertyp und -version</li>
-                <li>Betriebssystem</li>
-                <li>Referrer-URL (zuvor besuchte Seite)</li>
+                <li>{t('privacy.section3List1') as string}</li>
+                <li>{t('privacy.section3List2') as string}</li>
+                <li>{t('privacy.section3List3') as string}</li>
+                <li>{t('privacy.section3List4') as string}</li>
+                <li>{t('privacy.section3List5') as string}</li>
+                <li>{t('privacy.section3List6') as string}</li>
               </ul>
               <p className="text-muted-foreground mt-4">
-                Diese Daten werden zur Sicherstellung des Betriebs und zur 
-                Fehlerbehebung benötigt. Eine Zusammenführung mit anderen 
-                Datenquellen findet nicht statt. Rechtsgrundlage ist Art. 6 
-                Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+                {t('privacy.section3Text2') as string}
               </p>
               <p className="text-muted-foreground mt-2 text-sm">
-                Hinweis: Netlify unterliegt als US-Unternehmen dem 
-                EU-U.S. Data Privacy Framework.
+                {t('privacy.section3Note') as string}
               </p>
             </section>
 
-            {/* Google Fonts */}
+            {/* Section 4: Google Fonts */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                4. Google Fonts
+                {t('privacy.section4Title') as string}
               </h2>
               <p className="text-muted-foreground mb-4">
-                Diese Website nutzt Schriftarten von <strong>Google Fonts</strong> 
-                (Google Ireland Limited). Beim Laden der Website wird eine 
-                Verbindung zu Google-Servern hergestellt, wobei Ihre IP-Adresse 
-                an Google übermittelt wird.
+                {t('privacy.section4Text1') as string}
               </p>
               <p className="text-muted-foreground">
-                Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes 
-                Interesse an einer ansprechenden Darstellung der Website).
+                {t('privacy.section4Text2') as string}
               </p>
               <p className="text-muted-foreground mt-2 text-sm">
-                Weitere Informationen:{' '}
+                {t('privacy.section4Link') as string}{' '}
                 <a 
                   href="https://policies.google.com/privacy" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="underline hover:text-foreground"
                 >
-                  Google Datenschutzerklärung
+                  {t('privacy.section4LinkText') as string}
                 </a>
               </p>
             </section>
 
-            {/* Lokale Speicherung */}
+            {/* Section 5: Local Storage */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                5. Lokale Speicherung (localStorage)
+                {t('privacy.section5Title') as string}
               </h2>
               <p className="text-muted-foreground mb-4">
-                Diese Website speichert folgende Einstellungen lokal in Ihrem 
-                Browser (localStorage):
+                {t('privacy.section5Text1') as string}
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4">
-                <li>Gewählte Sprache (RU / EN / UKR)</li>
-                <li>Gewähltes Farbschema (Hell / Dunkel)</li>
+                <li>{t('privacy.section5List1') as string}</li>
+                <li>{t('privacy.section5List2') as string}</li>
               </ul>
               <p className="text-muted-foreground mt-4">
-                Diese Daten werden <strong>ausschließlich auf Ihrem Gerät</strong> 
-                {' '}gespeichert und nicht an Server übertragen. Sie können diese 
-                Daten jederzeit in den Browser-Einstellungen löschen.
+                {t('privacy.section5Text2') as string}
               </p>
               <p className="text-muted-foreground mt-2 text-sm">
-                Hinweis: LocalStorage ist technisch kein Cookie. Es werden keine 
-                einwilligungspflichtigen Cookies verwendet.
+                {t('privacy.section5Note') as string}
               </p>
             </section>
 
-            {/* Kontaktformular */}
+            {/* Section 6: Contact */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                6. Kontaktaufnahme
+                {t('privacy.section6Title') as string}
               </h2>
               <p className="text-muted-foreground mb-4">
-                Die Website enthält ein Kontaktformular. Derzeit ist dieses 
-                Formular <strong>nicht mit einem Mailserver verbunden</strong> – 
-                eingegebene Daten werden nicht übertragen oder gespeichert.
+                {t('privacy.section6Text1') as string}
               </p>
               <p className="text-muted-foreground">
-                Falls Sie Kontakt aufnehmen möchten, nutzen Sie bitte die im 
-                Impressum angegebene E-Mail-Adresse. Bei E-Mail-Kontakt werden 
-                Ihre Angaben zur Bearbeitung der Anfrage und für mögliche 
-                Anschlussfragen gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 
-                lit. b oder f DSGVO.
+                {t('privacy.section6Text2') as string}
               </p>
             </section>
 
-            {/* Keine weiteren Dienste */}
+            {/* Section 7: Technologies Not Used */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                7. Nicht verwendete Technologien
+                {t('privacy.section7Title') as string}
               </h2>
               <p className="text-muted-foreground">
-                Auf dieser Website werden <strong>nicht</strong> eingesetzt:
+                {t('privacy.section7Text') as string}
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-4 mt-2">
-                <li>Analyse-Tools (z. B. Google Analytics)</li>
-                <li>Werbenetzwerke</li>
-                <li>Social-Media-Plugins mit Datenübertragung</li>
-                <li>Tracking-Cookies</li>
-                <li>Newsletter-Dienste</li>
+                <li>{t('privacy.section7List1') as string}</li>
+                <li>{t('privacy.section7List2') as string}</li>
+                <li>{t('privacy.section7List3') as string}</li>
+                <li>{t('privacy.section7List4') as string}</li>
+                <li>{t('privacy.section7List5') as string}</li>
               </ul>
             </section>
 
-            {/* Betroffenenrechte */}
+            {/* Section 8: Your Rights */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                8. Ihre Rechte
+                {t('privacy.section8Title') as string}
               </h2>
               <p className="text-muted-foreground mb-4">
-                Nach der DSGVO stehen Ihnen folgende Rechte zu:
+                {t('privacy.section8Text') as string}
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>
-                  <strong>Auskunft</strong> (Art. 15 DSGVO): Sie können Auskunft 
-                  über Ihre verarbeiteten personenbezogenen Daten verlangen.
+                  <strong>{t('privacy.section8Right1Name') as string}</strong>{' '}
+                  {t('privacy.section8Right1Desc') as string}
                 </li>
                 <li>
-                  <strong>Berichtigung</strong> (Art. 16 DSGVO): Sie können die 
-                  Berichtigung unrichtiger Daten verlangen.
+                  <strong>{t('privacy.section8Right2Name') as string}</strong>{' '}
+                  {t('privacy.section8Right2Desc') as string}
                 </li>
                 <li>
-                  <strong>Löschung</strong> (Art. 17 DSGVO): Sie können die 
-                  Löschung Ihrer Daten verlangen, sofern keine gesetzlichen 
-                  Aufbewahrungspflichten bestehen.
+                  <strong>{t('privacy.section8Right3Name') as string}</strong>{' '}
+                  {t('privacy.section8Right3Desc') as string}
                 </li>
                 <li>
-                  <strong>Einschränkung</strong> (Art. 18 DSGVO): Sie können 
-                  die Einschränkung der Verarbeitung verlangen.
+                  <strong>{t('privacy.section8Right4Name') as string}</strong>{' '}
+                  {t('privacy.section8Right4Desc') as string}
                 </li>
                 <li>
-                  <strong>Widerspruch</strong> (Art. 21 DSGVO): Sie können 
-                  der Verarbeitung auf Basis berechtigter Interessen widersprechen.
+                  <strong>{t('privacy.section8Right5Name') as string}</strong>{' '}
+                  {t('privacy.section8Right5Desc') as string}
                 </li>
                 <li>
-                  <strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO): Sie 
-                  können Ihre Daten in einem gängigen Format erhalten.
+                  <strong>{t('privacy.section8Right6Name') as string}</strong>{' '}
+                  {t('privacy.section8Right6Desc') as string}
                 </li>
                 <li>
-                  <strong>Beschwerde</strong>: Sie haben das Recht, sich bei 
-                  einer Datenschutz-Aufsichtsbehörde zu beschweren.
+                  <strong>{t('privacy.section8Right7Name') as string}</strong>{' '}
+                  {t('privacy.section8Right7Desc') as string}
                 </li>
               </ul>
             </section>
 
-            {/* Kontakt für Datenschutz */}
+            {/* Section 9: Contact for Data Protection */}
             <section>
               <h2 className="text-lg font-medium text-foreground mb-4">
-                9. Kontakt in Datenschutzfragen
+                {t('privacy.section9Title') as string}
               </h2>
               <p className="text-muted-foreground">
-                Bei Fragen zum Datenschutz wenden Sie sich bitte an die im 
-                Impressum genannte E-Mail-Adresse.
+                {t('privacy.section9Text') as string}
               </p>
             </section>
 
           </div>
 
-          {/* Footer-Hinweis */}
+          {/* Footer */}
           <div className="mt-16 pt-8 border-t border-border/50">
             <p className="font-body text-sm text-muted-foreground">
-              Stand: April 2026
+              {t('legal.lastUpdated') as string} April 2026
             </p>
           </div>
         </article>
