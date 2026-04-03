@@ -113,17 +113,17 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-t border-border py-6 px-6">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-background backdrop-blur-xl border-t border-border py-6 px-6 shadow-lg">
           {/* Mobile Language Switcher */}
           <div className="flex sm:hidden items-center gap-2 mb-6">
             {languages.map((lang) => (
               <button
                 key={lang.code}
                 onClick={() => setLanguage(lang.code)}
-                className={`px-4 py-2 text-sm font-body rounded-full transition-all ${
+                className={`px-4 py-2 text-sm font-body font-medium rounded-full transition-all ${
                   language === lang.code
                     ? 'bg-secondary text-foreground'
-                    : 'text-muted-foreground'
+                    : 'text-foreground/70 hover:text-foreground'
                 }`}
               >
                 {lang.label}
@@ -136,7 +136,7 @@ export function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="font-body text-left text-foreground hover:text-muted-foreground transition-colors py-2"
+                className="font-body text-left text-foreground font-medium hover:text-foreground/70 transition-colors py-2"
               >
                 {item.label}
               </button>
