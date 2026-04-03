@@ -189,38 +189,38 @@
   filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.4));
 }
 
-/* Dark mode: reset light mode specific styles */
+/* Dark mode: adjusted styles for visibility on dark image */
 .dark .hero-content-backdrop {
-  display: none;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 80%);
 }
 
 .dark .hero-title {
   color: hsl(var(--foreground));
-  text-shadow: none;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
   letter-spacing: normal;
 }
 
 .dark .hero-subtitle {
-  color: hsl(var(--muted-foreground));
-  font-weight: 300;
-  text-shadow: none;
+  color: hsl(30 15% 85%);
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .dark .hero-btn-secondary {
-  backdrop-filter: none;
-  background: transparent;
-  border-color: hsl(var(--foreground) / 0.3);
+  backdrop-filter: blur(8px);
+  background: hsl(var(--background) / 0.4);
+  border-color: hsl(var(--foreground) / 0.5);
   color: hsl(var(--foreground));
   font-weight: 400;
 }
 
 .dark .hero-btn-secondary:hover {
-  background: hsl(var(--foreground) / 0.05);
+  background: hsl(var(--background) / 0.6);
 }
 
 .dark .hero-scroll-indicator {
-  color: hsl(var(--muted-foreground));
-  filter: none;
+  color: hsl(var(--foreground) / 0.7);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* Header over Hero - Light Mode readability */
