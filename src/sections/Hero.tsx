@@ -15,7 +15,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src="/images/0E0BA451-F411-4F09-AF9B-D16A2B117F0F.jpg"
-          alt="Toyger cat"
+          alt="Toyger cat with distinctive tiger-like stripes and golden-orange coat - a domestic cat breed resembling a miniature tiger"
           className="w-full h-full object-cover"
         />
         {/* Light mode: subtle warm dark overlay for text readability */}

@@ -4,26 +4,32 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const kittenImages = [
   {
     image: '/ai-images/toyger-kittens-playing.png',
+    alt: 'Playful Toyger kittens wrestling and playing together, showing typical kitten energy',
     span: 'col-span-1 row-span-2',
   },
   {
     image: '/ai-images/toyger-kitten-mouse.png',
+    alt: 'Toyger kitten practicing hunting instincts with a toy mouse',
     span: 'col-span-1 row-span-1',
   },
   {
     image: '/ai-images/toyger-kitten-box.png',
+    alt: 'Curious Toyger kitten exploring inside a cardboard box',
     span: 'col-span-1 row-span-1',
   },
   {
     image: '/ai-images/toyger-family.png',
+    alt: 'Toyger cat family - mother cat with her young kittens',
     span: 'col-span-1 row-span-2',
   },
   {
     image: '/ai-images/toyger-kitten-playful.png',
+    alt: 'Joyful Toyger kitten in a playful pose',
     span: 'col-span-1 row-span-1',
   },
   {
     image: '/ai-images/toyger-sofa.png',
+    alt: 'Toyger cat relaxing comfortably on a sofa at home',
     span: 'col-span-1 row-span-1',
   },
 ];
@@ -78,7 +84,7 @@ export function KittenMoments() {
             >
               <img
                 src={item.image}
-                alt={`Toyger kitten moment ${index + 1}`}
+                alt={item.alt}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

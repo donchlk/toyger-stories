@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { I18nProvider } from '@/i18n/I18nContext';
 import { ThemeProvider } from '@/hooks/useTheme';
+import { SEO } from '@/components/SEO';
 import { Header } from '@/sections/Header';
 import { Hero } from '@/sections/Hero';
 import { About } from '@/sections/About';
@@ -58,6 +59,7 @@ function App() {
   return (
     <I18nProvider>
       <ThemeProvider>
+        <SEO />
         <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<HomePage />} />

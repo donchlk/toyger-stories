@@ -11,6 +11,7 @@ const cats = [
     name: 'Leo',
     descKey: 'gallery.catLeo',
     image: '/images/A9DCB555-A15D-4AEA-A37D-9234BCE8ECF4.jpg',
+    alt: 'Toyger cat Leo with curious expression and distinctive tiger stripes',
     category: 'adults' as Filter,
   },
   {
@@ -18,6 +19,7 @@ const cats = [
     name: 'Milo',
     descKey: 'gallery.catMilo',
     image: '/images/2D844DD6-F621-4483-941E-C9727F41147D.jpg',
+    alt: 'Playful Toyger cat Milo showing energetic personality',
     category: 'adults' as Filter,
   },
   {
@@ -25,6 +27,7 @@ const cats = [
     name: 'Amber',
     descKey: 'gallery.catAmber',
     image: '/ai-images/toyger-sofa.png',
+    alt: 'Elegant Toyger cat Amber relaxing on a sofa, showcasing calm temperament',
     category: 'adults' as Filter,
   },
   {
@@ -32,6 +35,7 @@ const cats = [
     name: 'Tiger',
     descKey: 'gallery.catTiger',
     image: '/images/A2F0AF85-05D3-49E9-994A-83FF93CFE3A2.jpg',
+    alt: 'Calm Toyger cat Tiger with observant gaze and bold markings',
     category: 'favorites' as Filter,
   },
   {
@@ -39,6 +43,7 @@ const cats = [
     name: 'Zara',
     descKey: 'gallery.catZara',
     image: '/ai-images/toyger-portrait.png',
+    alt: 'Portrait of Toyger cat Zara with expressive eyes and tiger-like face markings',
     category: 'favorites' as Filter,
   },
   {
@@ -46,6 +51,7 @@ const cats = [
     name: 'Simba',
     descKey: 'gallery.catSimba',
     image: '/images/0E0BA451-F411-4F09-AF9B-D16A2B117F0F.jpg',
+    alt: 'Graceful Toyger cat Simba displaying proud posture and golden-orange coat',
     category: 'adults' as Filter,
   },
   {
@@ -53,6 +59,7 @@ const cats = [
     name: 'Rusty',
     descKey: 'gallery.catRusty',
     image: '/images/B11EA343-7598-434F-9847-D1FCDBA92689.jpg',
+    alt: 'Affectionate Toyger cat Rusty with warm expression and vertical stripes',
     category: 'favorites' as Filter,
   },
   {
@@ -60,6 +67,7 @@ const cats = [
     name: 'Oliver',
     descKey: 'gallery.catOliver',
     image: '/images/42E76541-1F19-4629-8D3B-2D8F38FC97C5.jpg',
+    alt: 'Intelligent Toyger cat Oliver with curious demeanor',
     category: 'archive' as Filter,
   },
   {
@@ -67,6 +75,7 @@ const cats = [
     name: 'Family',
     descKey: 'gallery.catFamily',
     image: '/ai-images/toyger-family.png',
+    alt: 'Toyger cat family - mother with her kittens showing breed characteristics',
     category: 'favorites' as Filter,
   },
   {
@@ -74,6 +83,7 @@ const cats = [
     name: 'Kittens',
     descKey: 'gallery.catKittensPlay',
     image: '/ai-images/toyger-kittens-playing.png',
+    alt: 'Playful Toyger kittens playing together, full of energy',
     category: 'kittens' as Filter,
   },
   {
@@ -81,6 +91,7 @@ const cats = [
     name: 'Hunter',
     descKey: 'gallery.catKittenMouse',
     image: '/ai-images/toyger-kitten-mouse.png',
+    alt: 'Toyger kitten Hunter practicing hunting instincts with toy mouse',
     category: 'kittens' as Filter,
   },
   {
@@ -88,6 +99,7 @@ const cats = [
     name: 'Scout',
     descKey: 'gallery.catKittenBox',
     image: '/ai-images/toyger-kitten-box.png',
+    alt: 'Curious Toyger kitten Scout exploring a cardboard box',
     category: 'kittens' as Filter,
   },
   {
@@ -95,6 +107,7 @@ const cats = [
     name: 'Joy',
     descKey: 'gallery.catKittenPlayful',
     image: '/ai-images/toyger-kitten-playful.png',
+    alt: 'Joyful Toyger kitten in playful pose showing carefree personality',
     category: 'kittens' as Filter,
   },
 ];
@@ -175,7 +188,7 @@ export function Gallery() {
               <div className="relative overflow-hidden rounded-xl bg-muted">
                 <img
                   src={cat.image}
-                  alt={cat.name}
+                  alt={cat.alt}
                   className="w-full h-auto object-cover"
                   loading="lazy"
                 />
@@ -197,7 +210,7 @@ export function Gallery() {
             <div className="relative">
               <img
                 src={selectedCat.image}
-                alt={selectedCat.name}
+                alt={selectedCat.alt}
                 className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/90 to-transparent">

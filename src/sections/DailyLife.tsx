@@ -71,7 +71,7 @@ export function DailyLife() {
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
               <img
                 src="/ai-images/toyger-sofa.png"
-                alt="Toyger cat relaxing at home"
+                alt="Toyger cat relaxing peacefully on a sofa, demonstrating calm temperament in home environment"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

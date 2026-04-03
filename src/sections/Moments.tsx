@@ -2,12 +2,12 @@ import { useI18n } from '@/i18n/I18nContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const moments = [
-  { image: '/images/42E76541-1F19-4629-8D3B-2D8F38FC97C5.jpg', span: 'col-span-1 row-span-2', alt: 'Toyger cat resting' },
-  { image: '/images/B11EA343-7598-434F-9847-D1FCDBA92689.jpg', span: 'col-span-1 row-span-1', alt: 'Toyger cat close-up' },
-  { image: '/images/A9DCB555-A15D-4AEA-A37D-9234BCE8ECF4.jpg', span: 'col-span-1 row-span-1', alt: 'Toyger cat watching' },
-  { image: '/images/2D844DD6-F621-4483-941E-C9727F41147D.jpg', span: 'col-span-1 row-span-2', alt: 'Toyger cat playing' },
-  { image: '/images/0E0BA451-F411-4F09-AF9B-D16A2B117F0F.jpg', span: 'col-span-1 row-span-1', alt: 'Toyger cat at home' },
-  { image: '/images/A2F0AF85-05D3-49E9-994A-83FF93CFE3A2.jpg', span: 'col-span-1 row-span-1', alt: 'Toyger cat portrait' },
+  { image: '/images/42E76541-1F19-4629-8D3B-2D8F38FC97C5.jpg', span: 'col-span-1 row-span-2', alt: 'Toyger cat resting peacefully, showcasing relaxed temperament' },
+  { image: '/images/B11EA343-7598-434F-9847-D1FCDBA92689.jpg', span: 'col-span-1 row-span-1', alt: 'Close-up of Toyger cat face with distinctive vertical stripes' },
+  { image: '/images/A9DCB555-A15D-4AEA-A37D-9234BCE8ECF4.jpg', span: 'col-span-1 row-span-1', alt: 'Attentive Toyger cat watching surroundings with curious expression' },
+  { image: '/images/2D844DD6-F621-4483-941E-C9727F41147D.jpg', span: 'col-span-1 row-span-2', alt: 'Playful Toyger cat in action, demonstrating energetic personality' },
+  { image: '/images/0E0BA451-F411-4F09-AF9B-D16A2B117F0F.jpg', span: 'col-span-1 row-span-1', alt: 'Elegant Toyger cat at home showing golden-orange coat with tiger markings' },
+  { image: '/images/A2F0AF85-05D3-49E9-994A-83FF93CFE3A2.jpg', span: 'col-span-1 row-span-1', alt: 'Toyger cat portrait highlighting expressive eyes and bold facial stripes' },
 ];
 
 export function Moments() {

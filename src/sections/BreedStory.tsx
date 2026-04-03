@@ -41,7 +41,7 @@ export function BreedStory() {
             <div className="aspect-square rounded-2xl overflow-hidden">
               <img
                 src="/ai-images/toyger-portrait.png"
-                alt="Toyger cat portrait"
+                alt="Portrait of a Toyger cat showing distinctive tiger-like facial markings and expressive eyes"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

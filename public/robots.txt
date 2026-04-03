@@ -1,0 +1,11 @@
+# Robots.txt for Toyger Stories
+# https://donchlk.github.io/toyger-stories/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://donchlk.github.io/toyger-stories/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1
