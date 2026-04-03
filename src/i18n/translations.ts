@@ -1,0 +1,624 @@
+export type Language = 'ru' | 'en' | 'ukr';
+
+export const translations = {
+  ru: {
+    nav: {
+      home: 'Главная',
+      about: 'О странице',
+      gallery: 'Галерея',
+      philosophy: 'Атмосфера',
+      breed: 'О породе',
+      moments: 'Моменты',
+      faq: 'Вопросы',
+      contact: 'Контакты',
+    },
+    hero: {
+      title: 'Истории о тех, кто делает дом теплее',
+      subtitle:
+        'Это спокойное пространство, посвящённое кошкам породы Toyger — их характеру, грации и избранным моментам из повседневной жизни.',
+      ctaGallery: 'Смотреть галерею',
+      ctaAbout: 'Подробнее',
+    },
+    about: {
+      title: 'О этой странице',
+      p1: 'Эта страница создана как тихое убежище — место, где можно замедлиться и провести время в компании тех, кто наполняет обычные дни особым смыслом. Здесь живут истории о кошках породы Toyger — их грации, характере и тёплых повседневных моментах.',
+      p2: 'Здесь нет спешки и суеты. Только фотографии, атмосфера и немного историй о тех, кто делает дом настоящим домом. Мы хотим, чтобы каждый, кто зайдёт сюда, ощутил то тепло, которое дарят нам наши кошки.',
+      p3: 'Мы не продаём и не рекламируем. Это просто страница о любви к кошкам — тёплая, личная, наша. Страница, которая растёт вместе с нами.',
+    },
+    gallery: {
+      title: 'Галерея',
+      subtitle: 'Избранные кадры из жизни наших питомцев',
+      filterAll: 'Все',
+      filterAdults: 'Взрослые',
+      filterKittens: 'Котята',
+      filterArchive: 'Архив',
+      filterFavorites: 'Любимые',
+      catLeo: 'Любопытный и внимательный',
+      catMilo: 'Игривый и энергичный',
+      catTiger: 'Спокойный и наблюдательный',
+      catSimba: 'Грациозный и гордый',
+      catRusty: 'Ласковый и преданный',
+      catOliver: 'Умный и любознательный',
+      catAmber: 'Спокойная и элегантная',
+      catZara: 'Выразительный взгляд, живой характер',
+      catFamily: 'Семья: мама и её котята',
+      catKittensPlay: 'Игривые, полные энергии',
+      catKittenMouse: 'Маленький охотник',
+      catKittenBox: 'Любопытный исследователь',
+      catKittenPlayful: 'Беззаботная радость',
+    },
+    kittenMoments: {
+      title: 'Котята Toyger',
+      subtitle: 'Первые шаги, первые игры, первые характеры',
+      p: 'Котята Toyger — это чистая энергия, любопытство и трогательная непосредственность. С первых недель они проявляют характер породы: активные, контактные, бесконечно игривые. Наблюдать за ними — отдельное удовольствие.',
+    },
+    philosophy: {
+      title: 'Атмосфера',
+      p1: 'Каждое утро начинается с тихого мурлыканья. Каждый вечер — с мирного сопения рядом. Это ритуалы, которые не требуют слов, но наполняют жизнь смыслом.',
+      p2: 'Мы верим, что красота в простых вещах: в мягком шелесте шерсти, в задумчивом взгляде, в тепле, которое дарит присутствие другого живого существа. И в этом Toyger особенно щедр — его выразительная натура делает каждый момент чуть более живым.',
+      p3: 'Эта страница — попытка сохранить и поделиться этим чувством. Не для показа, а для тех, кто понимает.',
+    },
+    breedStory: {
+      title: 'Знакомьтесь: Toyger',
+      intro:
+        'Toyger — это домашняя кошка, в которой природная грация встречается с продуманной красотой. Её внешность напоминает тигра, а характер — преданного и ласкового компаньона.',
+      p1: 'Порода Toyger была создана в конце 1980-х годов в США благодаря заводчице Джуди Сагден, которая мечтала о домашней кошке с тигровым обликом. Результат — уникальная порода, которая сегодня официально признана крупнейшими международными фелинологическими организациями.',
+      p2: 'Главная визуальная черта Toyger — яркие, чёткие полосы на тёплом золотисто-оранжевом фоне. В отличие от классического табби-рисунка, полосы у Toyger вертикальные и разветвлённые, что создаёт поразительное сходство с настоящим тигровым окрасом.',
+      p3: 'Но Toyger — это гораздо больше, чем красивая шерсть. Это кошка с выразительной мордой, мускулистым, но элегантным телосложением и невероятно живым взглядом. Общение с Toyger оставляет впечатление встречи с чем-то одновременно диким и удивительно домашним.',
+    },
+    whyToyger: {
+      title: 'Почему Toyger привлекает внимание',
+      subtitle: 'Что делает эту породу такой запоминающейся',
+      p1: 'Есть кошки, которых замечаешь мельком. А есть те, на которых останавливается взгляд. Toyger — из вторых. Первое впечатление — всегда удивление: настоящий тигр, только маленький?',
+      p2: 'Контраст между «диким» обликом и мягким характером — одна из главных интриг породы. Выразительные полосы, уверенная пластика движений, внимательный взгляд — всё это создаёт образ маленького хищника. Но стоит протянуть руку, и перед вами — нежная, контактная кошка, которая с удовольствием свернётся рядом.',
+      p3: 'Toyger не просто выглядит необычно — он двигается иначе. Мускулистое, слегка удлинённое тело, низкая линия движения и плавная пластика делают каждый шаг выразительным. Наблюдать за Toyger — это как смотреть небольшой живой документальный фильм у себя дома.',
+    },
+    breed: {
+      title: 'О породе Toyger',
+      subtitle: 'Несколько слов о тех, кто вдохновил эту страницу',
+      character: 'Характер',
+      characterDesc:
+        'Общительные, любопытные, преданные. Любят быть в центре внимания, но уважают личное пространство. В общении — открытые и отзывчивые, легко находят подход к каждому члену семьи.',
+      social: 'Общительность',
+      socialDesc:
+        'Хорошо ладят с людьми и другими животными. Не любят одиночества — для них важно быть частью семейного круга, ощущать близость и внимание.',
+      activity: 'Активность',
+      activityDesc:
+        'Игривые и энергичные, но без избыточной суеты. Любят интерактивные игры, умственные задачи и активное общение — особенно если это доставляет радость хозяину.',
+      care: 'Уход',
+      careDesc:
+        'Короткая, плотная шерсть не требует сложного ухода. Регулярное расчёсывание, внимание к питанию и стандартные визиты к ветеринару — основа заботы о Toyger.',
+    },
+    temperament: {
+      title: 'Характер и темперамент',
+      subtitle: 'Какой Toyger в повседневной жизни',
+      socialTitle: 'Общительность',
+      socialDesc:
+        'Toyger — кошка, которая искренне интересуется людьми. Она не просто присутствует в доме — она участвует в его жизни. Следует за хозяином, наблюдает, реагирует на настроение. Многие владельцы отмечают, что Toyger ведёт себя скорее как компаньон, чем как типичная кошка.',
+      intellectTitle: 'Интеллект',
+      intellectDesc:
+        'Порода отличается живым умом. Toyger быстро понимает привычки семьи, легко осваивает простые команды и с интересом относится к интерактивным играм. Это кошка, которой нужно не только комфортное пространство, но и умственная стимуляция.',
+      playfulTitle: 'Игривость',
+      playfulDesc:
+        'Toyger сохраняет игривость и во взрослом возрасте. Однако это не бесконтрольная энергия — скорее, осознанная увлечённость. Они любят игрушки, погоню и совместные игры, но умеют вовремя остановиться и расслабиться.',
+      adaptTitle: 'Адаптивность',
+      adaptDesc:
+        'Toyger хорошо чувствует себя в квартире. При достаточном внимании, пространстве для движения и интересных занятиях они спокойно живут в домашних условиях. Хорошо уживаются с другими животными и с детьми.',
+    },
+    funFacts: {
+      title: 'Интересные факты о Toyger',
+      subtitle: 'Несколько деталей, которые делают эту породу особенной',
+      fact1Title: 'Порода с историей мечты',
+      fact1Desc:
+        'Toyger появился благодаря Джуди Сагден — дочери создательницы бенгальской кошки. Она задалась целью создать домашнюю кошку, максимально напоминающую тигра, и начала работу в конце 1980-х.',
+      fact2Title: 'Каждый рисунок уникален',
+      fact2Desc:
+        'Полосы Toyger — как отпечатки пальцев: нет двух одинаковых кошек. Рисунок шерсти формируется индивидуально и никогда не повторяется.',
+      fact3Title: 'Вертикальные полосы — не случайность',
+      fact3Desc:
+        'В отличие от большинства полосатых кошек, у Toyger полосы направлены вертикально и разветвлены. Это результат целенаправленной селекционной работы, а не случайная мутация.',
+      fact4Title: 'Обучаемость на уровне собаки',
+      fact4Desc:
+        'Многие владельцы отмечают, что Toyger легко осваивает команды, ходит на поводке и охотно выполняет трюки — особенно если это сопровождается лакомством.',
+      fact5Title: '«Глиттер» на шерсти',
+      fact5Desc:
+        'Некоторые Toyger имеют характерный «глиттер-эффект» — лёгкое мерцание шерсти на свету, которое придаёт ей дополнительную выразительность.',
+      fact6Title: 'Молодая и развивающаяся порода',
+      fact6Desc:
+        'TICA признала Toyger как породу в 2007 году. Это одна из самых молодых официально зарегистрированных пород, и работа над улучшением типа продолжается по сей день.',
+    },
+    moments: {
+      title: 'Моменты',
+      subtitle: 'Повседневная жизнь в кадрах',
+    },
+    dailyLife: {
+      title: 'Toyger в повседневной жизни',
+      subtitle: 'Каково жить рядом с такой кошкой каждый день',
+      p1: 'Утро с Toyger начинается с присутствия. Они не будят грубо — скорее, просто оказываются рядом, наблюдая, ожидая, иногда аккуратно подталкивая лапой. Это не навязчивость, а внимание — такое, которое ценишь.',
+      p2: 'Днём Toyger находит себе занятия: наблюдает за птицами из окна, исследует новые предметы, играет с любимой игрушкой или просто следует за хозяином из комнаты в комнату. Они не требуют постоянного развлечения, но искренне ценят компанию.',
+      p3: 'Вечера — время расслабления. Toyger с удовольствием занимает место рядом, мурлычет, вытягивается и наблюдает за домашней рутиной. В этих тихих моментах особенно ощущается, как много тепла может дарить одна кошка.',
+      p4: 'Жизнь с Toyger — это ежедневное напоминание о том, что красота может быть спокойной, а настоящая связь не требует слов.',
+    },
+    whoFits: {
+      title: 'Кому может понравиться Toyger',
+      subtitle: 'Несколько наблюдений о том, кому близка эта порода',
+      item1:
+        'Тем, кто ценит не только красоту, но и характер — Toyger сочетает эффектную внешность с живым, вовлечённым темпераментом.',
+      item2:
+        'Людям, которые хотят активного и контактного питомца — эта порода создана для общения, а не для одиночества.',
+      item3:
+        'Семьям, где кошка станет частью повседневной жизни — Toyger любит участвовать во всём, что происходит вокруг.',
+      item4:
+        'Тем, кто готов уделять внимание и время — Toyger расцветает в заботливой среде, где есть игры, разговоры и просто присутствие рядом.',
+    },
+    breedFaq: {
+      title: 'Часто задаваемые вопросы о породе',
+      subtitle:
+        'То, что обычно хотят узнать люди, впервые услышавшие о Toyger',
+      q1: 'Что делает Toyger особенной породой?',
+      a1: 'Toyger — одна из немногих пород, целенаправленно созданных для визуального сходства с тигром. При этом это полностью домашняя кошка с мягким и общительным характером.',
+      q2: 'Правда ли, что Toyger похож на тигра?',
+      a2: 'Да, это главная визуальная идея породы. Яркие вертикальные полосы на тёплом фоне, мускулистое тело и выразительная морда создают узнаваемое сходство. Впрочем, степень выразительности рисунка может варьироваться.',
+      q3: 'Какой у Toyger характер?',
+      a3: 'Как правило — дружелюбный, общительный и любознательный. Toyger ориентирован на людей, любит внимание и легко встраивается в ритм жизни семьи.',
+      q4: 'Насколько Toyger активны?',
+      a4: 'Достаточно, чтобы быть интересными, но не настолько, чтобы утомлять. Они любят игры и движение, но умеют расслабиться и провести тихий вечер рядом.',
+      q5: 'Подходит ли Toyger для жизни в квартире?',
+      a5: 'Да. При наличии достаточного пространства, игрушек и внимания Toyger прекрасно себя чувствует в квартире. Главное — не оставлять их надолго в полном одиночестве.',
+      q6: 'Чем Toyger визуально отличается от других полосатых кошек?',
+      a6: 'У обычных табби-кошек рисунок состоит из кольцевидных или спиральных элементов. У Toyger полосы вертикальные, разветвлённые и более контрастные — ближе к рисунку настоящего тигра.',
+      q7: 'Нуждается ли Toyger в особом уходе?',
+      a7: 'Шерсть Toyger короткая и не требует сложного ухода. Регулярное расчёсывание, сбалансированное питание и стандартный ветеринарный контроль — всё, что нужно.',
+      q8: 'Ладит ли Toyger с другими животными и детьми?',
+      a8: 'В большинстве случаев — да. Toyger обычно хорошо уживаются с другими кошками, собаками и доброжелательными детьми, хотя, как и с любой породой, многое зависит от индивидуального темперамента и правильного знакомства.',
+    },
+    faq: {
+      title: 'Вопросы',
+      q1: 'Что это за страница?',
+      a1: 'Это личная страница о наших кошках породы Toyger — их фотографии, характер, атмосфера повседневной жизни. Здесь нет коммерческой составляющей — только тепло, уют и искренняя любовь к этой удивительной породе.',
+      q2: 'Можно ли использовать фотографии?',
+      a2: 'Все фотографии на странице являются авторскими и защищены авторским правом. Если вы хотите использовать их, пожалуйста, свяжитесь с нами через форму контактов — мы всегда открыты к диалогу.',
+      q3: 'Как часто обновляется галерея?',
+      a3: 'Мы добавляем новые кадры по мере появления особенных моментов. Следите за обновлениями — каждый новый снимок рассказывает свою историю.',
+      q4: 'Есть ли у вас советы по уходу?',
+      a4: 'В разделе о породе мы делимся общими наблюдениями из опыта. Однако для вопросов, связанных со здоровьем, всегда рекомендуем обращаться к квалифицированному ветеринару.',
+    },
+    futureUpdates: {
+      title: 'Эта история продолжается',
+      p1: 'Страница «Toyger Stories» будет расти и дополняться. Со временем здесь появятся новые фотографии, новые знакомства с нашими кошками и свежие наблюдения из жизни рядом с ними.',
+      p2: 'Если вам интересна порода Toyger — заглядывайте снова. Мы рады делиться тем, что составляет нашу повседневную жизнь с этими удивительными кошками.',
+    },
+    contact: {
+      title: 'Контакты',
+      subtitle:
+        'Если вам интересна порода Toyger или у вас есть вопросы — напишите нам. Мы рады общению.',
+      name: 'Имя',
+      email: 'Email',
+      message: 'Сообщение',
+      send: 'Отправить',
+      privacy:
+        'Отправляя форму, вы соглашаетесь с обработкой персональных данных. Мы не передаём информацию третьим лицам.',
+      success: 'Сообщение отправлено. Спасибо!',
+    },
+    footer: {
+      rights: 'Все права защищены',
+      tagline: 'Страница о кошках породы Toyger и тех, кто делает дом теплее',
+      language: 'Язык',
+      legal: 'Правовая информация',
+    },
+  },
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      gallery: 'Gallery',
+      philosophy: 'Atmosphere',
+      breed: 'Breed',
+      moments: 'Moments',
+      faq: 'FAQ',
+      contact: 'Contact',
+    },
+    hero: {
+      title: 'Stories of those who make home warmer',
+      subtitle:
+        'A calm space dedicated to Toyger cats — their character, grace, and selected moments from everyday life.',
+      ctaGallery: 'View Gallery',
+      ctaAbout: 'Learn More',
+    },
+    about: {
+      title: 'About this page',
+      p1: 'This page was created as a quiet sanctuary — a place to slow down and spend time in the company of those who fill ordinary days with special meaning. Here live stories about Toyger cats — their grace, character, and warm everyday moments.',
+      p2: 'There is no rush or hustle here. Only photographs, atmosphere, and a few stories about those who make a house a true home. We want everyone who visits to feel the warmth our cats bring to our lives.',
+      p3: 'We do not sell or advertise. This is simply a page about love for cats — warm, personal, ours. A page that grows alongside us.',
+    },
+    gallery: {
+      title: 'Gallery',
+      subtitle: 'Selected frames from the lives of our companions',
+      filterAll: 'All',
+      filterAdults: 'Adults',
+      filterKittens: 'Kittens',
+      filterArchive: 'Archive',
+      filterFavorites: 'Favorites',
+      catLeo: 'Curious and attentive',
+      catMilo: 'Playful and energetic',
+      catTiger: 'Calm and observant',
+      catSimba: 'Graceful and proud',
+      catRusty: 'Affectionate and devoted',
+      catOliver: 'Smart and curious',
+      catAmber: 'Calm and elegant',
+      catZara: 'Expressive gaze, lively character',
+      catFamily: 'Family: mother and her kittens',
+      catKittensPlay: 'Playful and full of energy',
+      catKittenMouse: 'A little hunter',
+      catKittenBox: 'A curious explorer',
+      catKittenPlayful: 'Carefree joy',
+    },
+    kittenMoments: {
+      title: 'Toyger Kittens',
+      subtitle: 'First steps, first games, first personalities',
+      p: 'Toyger kittens are pure energy, curiosity, and touching spontaneity. From their very first weeks, they show the breed\'s character: active, sociable, endlessly playful. Watching them is a joy all on its own.',
+    },
+    philosophy: {
+      title: 'Atmosphere',
+      p1: 'Every morning begins with quiet purring. Every evening — with peaceful breathing nearby. These are rituals that need no words, yet fill life with meaning.',
+      p2: 'We believe that beauty lies in simple things: in the soft rustle of fur, in a thoughtful gaze, in the warmth that the presence of another living being brings. And in this, the Toyger is especially generous — its expressive nature makes every moment feel a little more alive.',
+      p3: 'This page is an attempt to preserve and share this feeling. Not for show, but for those who understand.',
+    },
+    breedStory: {
+      title: 'Meet the Toyger',
+      intro:
+        'The Toyger is a domestic cat where natural grace meets deliberate beauty. Its appearance recalls a tiger, while its character is that of a devoted and affectionate companion.',
+      p1: 'The Toyger breed was developed in the late 1980s in the United States by breeder Judy Sugden, who envisioned a domestic cat with a tiger-like appearance. The result is a unique breed now officially recognized by major international feline organizations.',
+      p2: 'The Toyger\'s most striking visual trait is its bold, defined stripes set against a warm golden-orange background. Unlike the classic tabby pattern, the Toyger\'s stripes are vertical and branching, creating a remarkable resemblance to a real tiger\'s coat.',
+      p3: 'But the Toyger is far more than a beautiful coat. It is a cat with an expressive face, a muscular yet elegant build, and an incredibly vivid gaze. Spending time with a Toyger feels like encountering something simultaneously wild and wonderfully domestic.',
+    },
+    whyToyger: {
+      title: 'Why the Toyger Captures Attention',
+      subtitle: 'What makes this breed so memorable',
+      p1: 'Some cats you notice in passing. Others make you stop and look. The Toyger belongs to the second group. The first impression is always surprise: a real tiger, only smaller?',
+      p2: 'The contrast between its \'wild\' appearance and gentle personality is one of the breed\'s most compelling qualities. Striking stripes, confident movement, an attentive gaze — everything creates the image of a small predator. But reach out your hand, and you\'ll find a tender, sociable cat who will happily curl up beside you.',
+      p3: 'The Toyger doesn\'t just look unusual — it moves differently. A muscular, slightly elongated body, a low line of motion, and fluid grace make every step expressive. Watching a Toyger is like having your own small, living wildlife documentary at home.',
+    },
+    breed: {
+      title: 'About the Toyger Breed',
+      subtitle: 'A few words about those who inspired this page',
+      character: 'Character',
+      characterDesc:
+        'Sociable, curious, devoted. They love to be the center of attention but respect personal space. Open and responsive, they easily connect with every family member.',
+      social: 'Sociability',
+      socialDesc:
+        'They get along well with people and other animals. They don\'t like being alone — being part of the family circle, feeling closeness and attention, is important to them.',
+      activity: 'Activity',
+      activityDesc:
+        'Playful and energetic, but without excessive fuss. They love interactive games, mental challenges, and active engagement — especially when it brings joy to their owner.',
+      care: 'Care',
+      careDesc:
+        'Their short, dense coat requires little grooming. Regular brushing, attention to nutrition, and standard veterinary visits are the essentials of Toyger care.',
+    },
+    temperament: {
+      title: 'Character and Temperament',
+      subtitle: 'What the Toyger is like in daily life',
+      socialTitle: 'Sociability',
+      socialDesc:
+        'The Toyger is a cat that genuinely takes interest in people. It doesn\'t merely exist in the home — it participates in its life. Following the owner, observing, responding to moods. Many owners note that a Toyger behaves more like a companion than a typical cat.',
+      intellectTitle: 'Intelligence',
+      intellectDesc:
+        'The breed is known for its quick mind. Toygers pick up on family routines, readily learn simple commands, and show genuine interest in interactive games. This is a cat that needs not only comfortable space but also mental stimulation.',
+      playfulTitle: 'Playfulness',
+      playfulDesc:
+        'The Toyger stays playful well into adulthood. However, this isn\'t uncontrolled energy — it\'s more of a mindful engagement. They love toys, chase games, and interactive play, but know when to settle down and relax.',
+      adaptTitle: 'Adaptability',
+      adaptDesc:
+        'Toygers do well in apartment living. With sufficient attention, room to move, and engaging activities, they thrive in indoor environments. They typically get along well with other pets and children.',
+    },
+    funFacts: {
+      title: 'Interesting Facts About the Toyger',
+      subtitle: 'A few details that make this breed truly special',
+      fact1Title: 'A Breed Born from a Dream',
+      fact1Desc:
+        'The Toyger was created by Judy Sugden — daughter of the Bengal cat\'s creator. She set out to develop a domestic cat resembling a tiger as closely as possible, beginning her work in the late 1980s.',
+      fact2Title: 'Every Pattern Is One of a Kind',
+      fact2Desc:
+        'A Toyger\'s stripes are like fingerprints: no two cats are alike. Each coat pattern forms individually and never repeats.',
+      fact3Title: 'Vertical Stripes by Design',
+      fact3Desc:
+        'Unlike most tabby cats, the Toyger\'s stripes run vertically and branch out. This is the result of deliberate selective breeding, not a random mutation.',
+      fact4Title: 'Trainability Rivaling Dogs',
+      fact4Desc:
+        'Many owners report that Toygers readily learn commands, walk on a leash, and happily perform tricks — especially when treats are involved.',
+      fact5Title: 'A Glitter Effect',
+      fact5Desc:
+        'Some Toygers have a distinctive \'glitter effect\' — a subtle shimmer in their coat under the light that adds an extra layer of visual appeal.',
+      fact6Title: 'A Young and Evolving Breed',
+      fact6Desc:
+        'TICA recognized the Toyger as a breed in 2007. It is one of the youngest officially registered breeds, and work on refining the type continues to this day.',
+    },
+    moments: {
+      title: 'Moments',
+      subtitle: 'Everyday life in frames',
+    },
+    dailyLife: {
+      title: 'Toyger in Everyday Life',
+      subtitle: 'What it\'s like to live alongside this cat every day',
+      p1: 'A morning with a Toyger starts with presence. They don\'t wake you rudely — they simply appear nearby, watching, waiting, sometimes offering a gentle nudge with a paw. It\'s not intrusion, it\'s attention — the kind you come to appreciate.',
+      p2: 'During the day, a Toyger finds things to do: watching birds from the window, exploring new objects, playing with a favorite toy, or simply following the owner from room to room. They don\'t demand constant entertainment but genuinely value company.',
+      p3: 'Evenings are for unwinding. A Toyger will happily claim a spot nearby, purring, stretching out, and observing the household routine. In these quiet moments, you feel most clearly how much warmth a single cat can bring.',
+      p4: 'Living with a Toyger is a daily reminder that beauty can be calm, and a true connection doesn\'t require words.',
+    },
+    whoFits: {
+      title: 'Who Might Enjoy a Toyger',
+      subtitle: 'A few observations about who connects with this breed',
+      item1:
+        'Those who value character as much as beauty — the Toyger combines a striking appearance with a lively, engaged temperament.',
+      item2:
+        'People who want an active and sociable companion — this breed is made for connection, not solitude.',
+      item3:
+        'Families where a cat becomes part of everyday life — the Toyger loves being involved in everything happening around it.',
+      item4:
+        'Those willing to give attention and time — a Toyger thrives in a caring environment with play, conversation, and simply being present.',
+    },
+    breedFaq: {
+      title: 'Frequently Asked Questions About the Breed',
+      subtitle:
+        'What people usually want to know when they first hear about the Toyger',
+      q1: 'What makes the Toyger a special breed?',
+      a1: 'The Toyger is one of the few breeds deliberately created to visually resemble a tiger. At the same time, it is a fully domestic cat with a gentle and sociable character.',
+      q2: 'Does the Toyger really look like a tiger?',
+      a2: 'Yes, that is the breed\'s core visual idea. Bold vertical stripes on a warm background, a muscular body, and an expressive face create a recognizable resemblance. That said, the degree of pattern intensity can vary.',
+      q3: 'What is the Toyger\'s temperament like?',
+      a3: 'Generally — friendly, sociable, and curious. The Toyger is people-oriented, loves attention, and easily adapts to a family\'s rhythm of life.',
+      q4: 'How active are Toygers?',
+      a4: 'Active enough to be interesting, but not so much as to be exhausting. They enjoy play and movement but know how to relax and spend a quiet evening nearby.',
+      q5: 'Is the Toyger suitable for apartment living?',
+      a5: 'Yes. With adequate space, toys, and attention, the Toyger thrives in an apartment. The main thing is not to leave them alone for extended periods.',
+      q6: 'How does the Toyger visually differ from other striped cats?',
+      a6: 'Regular tabby cats have ring-shaped or spiral patterns. The Toyger\'s stripes are vertical, branching, and more contrasting — closer to the pattern of a real tiger.',
+      q7: 'Does the Toyger need special care?',
+      a7: 'The Toyger\'s coat is short and low-maintenance. Regular brushing, balanced nutrition, and standard veterinary checkups are all that\'s needed.',
+      q8: 'Does the Toyger get along with other pets and children?',
+      a8: 'In most cases — yes. Toygers generally coexist well with other cats, dogs, and friendly children, though as with any breed, much depends on individual temperament and proper introductions.',
+    },
+    faq: {
+      title: 'Questions',
+      q1: 'What is this page?',
+      a1: 'This is a personal page about our Toyger cats — their photos, character, and everyday atmosphere. There is no commercial component here — only warmth, coziness, and a sincere love for this remarkable breed.',
+      q2: 'Can I use the photographs?',
+      a2: 'All photographs on this page are original and protected by copyright. If you would like to use them, please contact us through the form — we are always open to dialogue.',
+      q3: 'How often is the gallery updated?',
+      a3: 'We add new frames as special moments arise. Stay tuned — every new photograph tells its own story.',
+      q4: 'Do you have care tips?',
+      a4: 'We share general observations from experience in the breed section. However, for health-related questions, we always recommend consulting a qualified veterinarian.',
+    },
+    futureUpdates: {
+      title: 'This Story Continues',
+      p1: '\'Toyger Stories\' will keep growing and evolving. Over time, new photographs, introductions to our cats, and fresh observations from life alongside them will appear here.',
+      p2: 'If the Toyger breed interests you — visit again. We are happy to share what makes up our everyday life with these remarkable cats.',
+    },
+    contact: {
+      title: 'Contact',
+      subtitle:
+        'If you\'re interested in the Toyger breed or have questions — write to us. We welcome conversation.',
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      send: 'Send',
+      privacy:
+        'By submitting the form, you agree to the processing of personal data. We do not share information with third parties.',
+      success: 'Message sent. Thank you!',
+    },
+    footer: {
+      rights: 'All rights reserved',
+      tagline: 'A page about Toyger cats and those who make home warmer',
+      language: 'Language',
+      legal: 'Legal',
+    },
+  },
+  ukr: {
+    nav: {
+      home: 'Головна',
+      about: 'Про сторінку',
+      gallery: 'Галерея',
+      philosophy: 'Атмосфера',
+      breed: 'Про породу',
+      moments: 'Моменти',
+      faq: 'Питання',
+      contact: 'Контакти',
+    },
+    hero: {
+      title: 'Історії про тих, хто робить дім теплішим',
+      subtitle:
+        'Це спокійний простір, присвячений кішкам породи Toyger — їхньому характеру, грації та обраним моментам із повсякденного життя.',
+      ctaGallery: 'Дивитися галерею',
+      ctaAbout: 'Докладніше',
+    },
+    about: {
+      title: 'Про цю сторінку',
+      p1: 'Ця сторінка створена як тихе сховище — місце, де можна сповільнитися та провести час у компанії тих, хто наповнює звичайні дні особливим змістом. Тут живуть історії про кішок породи Toyger — їхню грацію, характер та теплі повсякденні моменти.',
+      p2: 'Тут немає поспіху та метушні. Лише фотографії, атмосфера та трохи історій про тих, хто робить дім справжнім домом. Ми хочемо, щоб кожен, хто зайде сюди, відчув те тепло, яке дарують нам наші коти.',
+      p3: 'Ми не продаємо і не рекламуємо. Це просто сторінка про любов до котів — тепла, особиста, наша. Сторінка, що росте разом із нами.',
+    },
+    gallery: {
+      title: 'Галерея',
+      subtitle: 'Обрані кадри з життя наших улюбленців',
+      filterAll: 'Всі',
+      filterAdults: 'Дорослі',
+      filterKittens: 'Кошенята',
+      filterArchive: 'Архів',
+      filterFavorites: 'Улюблені',
+      catLeo: 'Допитливий і уважний',
+      catMilo: 'Грайливий та енергійний',
+      catTiger: 'Спокійний і спостережливий',
+      catSimba: 'Граціозний і гордий',
+      catRusty: 'Ласкавий і відданий',
+      catOliver: 'Розумний і допитливий',
+      catAmber: 'Спокійна та елегантна',
+      catZara: 'Виразний погляд, жвавий характер',
+      catFamily: 'Родина: мама та її кошенята',
+      catKittensPlay: 'Грайливі, сповнені енергії',
+      catKittenMouse: 'Маленький мисливець',
+      catKittenBox: 'Допитливий дослідник',
+      catKittenPlayful: 'Безтурботна радість',
+    },
+    kittenMoments: {
+      title: 'Кошенята Toyger',
+      subtitle: 'Перші кроки, перші ігри, перші характери',
+      p: 'Кошенята Toyger — це чиста енергія, допитливість і зворушлива безпосередність. З перших тижнів вони проявляють характер породи: активні, контактні, нескінченно грайливі. Спостерігати за ними — окреме задоволення.',
+    },
+    philosophy: {
+      title: 'Атмосфера',
+      p1: 'Кожен ранок починається з тихого муркотіння. Кожен вечір — з мирного сопіння поруч. Це ритуали, що не потребують слів, але наповнюють життя змістом.',
+      p2: 'Ми віримо, що краса в простих речах: у м\'якому шелесті шерсті, у задумливому погляді, в теплі, яке дарує присутність іншої живої істоти. І в цьому Toyger особливо щедрий — його виразна натура робить кожну мить трохи живішою.',
+      p3: 'Ця сторінка — спроба зберегти та поділитися цим відчуттям. Не напоказ, а для тих, хто розуміє.',
+    },
+    breedStory: {
+      title: 'Знайомтеся: Toyger',
+      intro:
+        'Toyger — це домашня кішка, в якій природна грація зустрічається з продуманою красою. Зовні вона нагадує тигра, а за характером — відданий і ніжний компаньйон.',
+      p1: 'Порода Toyger була створена наприкінці 1980-х років у США заводчицею Джуді Сагден, яка мріяла про домашню кішку з тигровим виглядом. Результат — унікальна порода, яку сьогодні офіційно визнають найбільші міжнародні фелінологічні організації.',
+      p2: 'Головна візуальна риса Toyger — яскраві, чіткі смуги на теплому золотисто-помаранчевому тлі. На відміну від класичного табби-малюнка, смуги у Toyger вертикальні та розгалужені, що створює вражаючу схожість зі справжнім тигровим забарвленням.',
+      p3: 'Але Toyger — це набагато більше, ніж гарна шерсть. Це кішка з виразною мордою, мускулистою, але елегантною статурою та неймовірно живим поглядом. Спілкування з Toyger залишає враження зустрічі з чимось водночас диким і дивовижно домашнім.',
+    },
+    whyToyger: {
+      title: 'Чому Toyger привертає увагу',
+      subtitle: 'Що робить цю породу такою незабутньою',
+      p1: 'Є коти, яких помічаєш побіжно. А є ті, на яких зупиняється погляд. Toyger — з других. Перше враження — завжди здивування: справжній тигр, тільки маленький?',
+      p2: 'Контраст між «диким» виглядом і м\'яким характером — одна з головних інтриг породи. Виразні смуги, впевнена пластика рухів, уважний погляд — все це створює образ маленького хижака. Але варто простягнути руку — і перед вами ніжна, контактна кішка, яка із задоволенням згорнеться поруч.',
+      p3: 'Toyger не просто виглядає незвично — він рухається інакше. Мускулисте, злегка подовжене тіло, низька лінія руху та плавна пластика роблять кожен крок виразним. Спостерігати за Toyger — це як дивитися невеликий живий документальний фільм у себе вдома.',
+    },
+    breed: {
+      title: 'Про породу Toyger',
+      subtitle: 'Кілька слів про тих, хто надихнув цю сторінку',
+      character: 'Характер',
+      characterDesc:
+        'Товариські, допитливі, віддані. Люблять бути в центрі уваги, але поважають особистий простір. У спілкуванні — відкриті та чуйні, легко знаходять підхід до кожного члена сім\'ї.',
+      social: 'Товариськість',
+      socialDesc:
+        'Добре ладнають з людьми та іншими тваринами. Не люблять самотності — для них важливо бути частиною сімейного кола, відчувати близькість і увагу.',
+      activity: 'Активність',
+      activityDesc:
+        'Грайливі та енергійні, але без зайвої метушні. Люблять інтерактивні ігри, розумові завдання й активне спілкування — особливо якщо це приносить радість господарю.',
+      care: 'Догляд',
+      careDesc:
+        'Коротка, щільна шерсть не потребує складного догляду. Регулярне розчісування, увага до харчування та стандартні візити до ветеринара — основа турботи про Toyger.',
+    },
+    temperament: {
+      title: 'Характер і темперамент',
+      subtitle: 'Який Toyger у повсякденному житті',
+      socialTitle: 'Товариськість',
+      socialDesc:
+        'Toyger — кішка, яка щиро цікавиться людьми. Вона не просто присутня в домі — вона бере участь у його житті. Ходить за господарем, спостерігає, реагує на настрій. Багато власників зазначають, що Toyger поводиться скоріше як компаньйон, ніж як типова кішка.',
+      intellectTitle: 'Інтелект',
+      intellectDesc:
+        'Порода відзначається жвавим розумом. Toyger швидко розуміє звички сім\'ї, легко засвоює прості команди та з інтересом ставиться до інтерактивних ігор. Це кішка, якій потрібен не лише комфортний простір, а й розумова стимуляція.',
+      playfulTitle: 'Грайливість',
+      playfulDesc:
+        'Toyger зберігає грайливість і в дорослому віці. Втім, це не безконтрольна енергія — скоріше, усвідомлена захопленість. Вони люблять іграшки, гонитву та спільні ігри, але вміють вчасно зупинитися й розслабитися.',
+      adaptTitle: 'Адаптивність',
+      adaptDesc:
+        'Toyger добре почувається у квартирі. За достатньої уваги, простору для руху та цікавих занять вони спокійно живуть у домашніх умовах. Добре ладнають з іншими тваринами та з дітьми.',
+    },
+    funFacts: {
+      title: 'Цікаві факти про Toyger',
+      subtitle: 'Кілька деталей, які роблять цю породу особливою',
+      fact1Title: 'Порода, народжена з мрії',
+      fact1Desc:
+        'Toyger з\'явився завдяки Джуді Сагден — доньці створительки бенгальської кішки. Вона поставила за мету створити домашню кішку, максимально схожу на тигра, і розпочала роботу наприкінці 1980-х.',
+      fact2Title: 'Кожен малюнок — єдиний у своєму роді',
+      fact2Desc:
+        'Смуги Toyger — як відбитки пальців: немає двох однакових кішок. Малюнок шерсті формується індивідуально і ніколи не повторюється.',
+      fact3Title: 'Вертикальні смуги — не випадковість',
+      fact3Desc:
+        'На відміну від більшості смугастих кішок, у Toyger смуги направлені вертикально та розгалужені. Це результат цілеспрямованої селекційної роботи, а не випадкова мутація.',
+      fact4Title: 'Навчається на рівні собаки',
+      fact4Desc:
+        'Багато власників зазначають, що Toyger легко засвоює команди, гуляє на повідку та охоче виконує трюки — особливо якщо це супроводжується ласощами.',
+      fact5Title: '«Гліттер» на шерсті',
+      fact5Desc:
+        'Деякі Toyger мають характерний «гліттер-ефект» — легке мерехтіння шерсті на світлі, що надає їй додаткової виразності.',
+      fact6Title: 'Молода порода, що розвивається',
+      fact6Desc:
+        'TICA визнала Toyger як породу у 2007 році. Це одна з наймолодших офіційно зареєстрованих порід, і робота над вдосконаленням типу триває донині.',
+    },
+    moments: {
+      title: 'Моменти',
+      subtitle: 'Повсякденне життя в кадрах',
+    },
+    dailyLife: {
+      title: 'Toyger у повсякденному житті',
+      subtitle: 'Як це — жити поруч із такою кішкою щодня',
+      p1: 'Ранок із Toyger починається з присутності. Вони не будять грубо — скоріше просто опиняються поруч, спостерігаючи, очікуючи, іноді акуратно підштовхуючи лапою. Це не нав\'язливість, а увага — така, яку цінуєш.',
+      p2: 'Вдень Toyger знаходить собі заняття: спостерігає за пташками з вікна, досліджує нові предмети, грається з улюбленою іграшкою або просто ходить за господарем з кімнати в кімнату. Вони не вимагають постійних розваг, але щиро цінують компанію.',
+      p3: 'Вечори — час розслаблення. Toyger із задоволенням займає місце поруч, муркоче, витягується та спостерігає за домашньою рутиною. У ці тихі моменти особливо відчувається, як багато тепла може дарувати одна кішка.',
+      p4: 'Життя з Toyger — це щоденне нагадування про те, що краса може бути спокійною, а справжній зв\'язок не потребує слів.',
+    },
+    whoFits: {
+      title: 'Кому може сподобатися Toyger',
+      subtitle: 'Кілька спостережень про те, кому близька ця порода',
+      item1:
+        'Тим, хто цінує не лише красу, а й характер — Toyger поєднує ефектну зовнішність із жвавим, залученим темпераментом.',
+      item2:
+        'Людям, які хочуть активного та контактного улюбленця — ця порода створена для спілкування, а не для самотності.',
+      item3:
+        'Сім\'ям, де кішка стане частиною повсякденного життя — Toyger любить брати участь у всьому, що відбувається навколо.',
+      item4:
+        'Тим, хто готовий приділяти увагу та час — Toyger розквітає в турботливому середовищі, де є ігри, розмови і просто присутність поруч.',
+    },
+    breedFaq: {
+      title: 'Часті запитання про породу',
+      subtitle:
+        'Те, що зазвичай хочуть дізнатися люди, вперше почувши про Toyger',
+      q1: 'Що робить Toyger особливою породою?',
+      a1: 'Toyger — одна з небагатьох порід, цілеспрямовано створених для візуальної схожості з тигром. При цьому це повністю домашня кішка з м\'яким і товариським характером.',
+      q2: 'Чи справді Toyger схожий на тигра?',
+      a2: 'Так, це головна візуальна ідея породи. Яскраві вертикальні смуги на теплому тлі, мускулисте тіло та виразна морда створюють впізнавану схожість. Втім, ступінь виразності малюнка може варіюватися.',
+      q3: 'Який у Toyger характер?',
+      a3: 'Як правило — дружелюбний, товариський і допитливий. Toyger орієнтований на людей, любить увагу та легко вписується в ритм життя сім\'ї.',
+      q4: 'Наскільки Toyger активні?',
+      a4: 'Достатньо, щоб бути цікавими, але не настільки, щоб втомлювати. Вони люблять ігри та рух, але вміють розслабитися й провести тихий вечір поруч.',
+      q5: 'Чи підходить Toyger для життя в квартирі?',
+      a5: 'Так. За наявності достатнього простору, іграшок та уваги Toyger чудово почувається в квартирі. Головне — не залишати їх надовго на самоті.',
+      q6: 'Чим Toyger візуально відрізняється від інших смугастих кішок?',
+      a6: 'У звичайних табби-кішок малюнок складається з кільцевидних або спіральних елементів. У Toyger смуги вертикальні, розгалужені та більш контрастні — ближче до малюнка справжнього тигра.',
+      q7: 'Чи потребує Toyger особливого догляду?',
+      a7: 'Шерсть Toyger коротка і не потребує складного догляду. Регулярне розчісування, збалансоване харчування та стандартний ветеринарний контроль — усе, що потрібно.',
+      q8: 'Чи ладнає Toyger з іншими тваринами та дітьми?',
+      a8: 'У більшості випадків — так. Toyger зазвичай добре уживаються з іншими котами, собаками та доброзичливими дітьми, хоча, як і з будь-якою породою, багато залежить від індивідуального темпераменту та правильного знайомства.',
+    },
+    faq: {
+      title: 'Питання',
+      q1: 'Що це за сторінка?',
+      a1: 'Це особиста сторінка про наших кішок породи Toyger — їхні фотографії, характер, атмосфера повсякденного життя. Тут немає комерційної складової — лише тепло, затишок і щира любов до цієї дивовижної породи.',
+      q2: 'Чи можна використовувати фотографії?',
+      a2: 'Усі фотографії на сторінці є авторськими та захищені авторським правом. Якщо ви хочете їх використати, будь ласка, зв\'яжіться з нами через форму контактів — ми завжди відкриті до діалогу.',
+      q3: 'Як часто оновлюється галерея?',
+      a3: 'Ми додаємо нові кадри в міру появи особливих моментів. Слідкуйте за оновленнями — кожен новий знімок розповідає свою історію.',
+      q4: 'Чи є у вас поради щодо догляду?',
+      a4: 'У розділі про породу ми ділимося загальними спостереженнями з досвіду. Однак для питань, пов\'язаних зі здоров\'ям, завжди рекомендуємо звертатися до кваліфікованого ветеринара.',
+    },
+    futureUpdates: {
+      title: 'Ця історія продовжується',
+      p1: 'Сторінка «Toyger Stories» буде рости та доповнюватися. З часом тут з\'являться нові фотографії, нові знайомства з нашими котами та свіжі спостереження з життя поруч із ними.',
+      p2: 'Якщо вам цікава порода Toyger — заходьте знову. Ми раді ділитися тим, що складає наше повсякденне життя з цими дивовижними кішками.',
+    },
+    contact: {
+      title: 'Контакти',
+      subtitle:
+        'Якщо вам цікава порода Toyger або у вас є запитання — напишіть нам. Ми раді спілкуванню.',
+      name: 'Ім\'я',
+      email: 'Email',
+      message: 'Повідомлення',
+      send: 'Надіслати',
+      privacy:
+        'Надсилаючи форму, ви погоджуєтеся з обробкою персональних даних. Ми не передаємо інформацію третім особам.',
+      success: 'Повідомлення надіслано. Дякуємо!',
+    },
+    footer: {
+      rights: 'Усі права захищені',
+      tagline: 'Сторінка про кішок породи Toyger та тих, хто робить дім теплішим',
+      language: 'Мова',
+      legal: 'Правова інформація',
+    },
+  },
+};
+
+export type Translations = typeof translations;

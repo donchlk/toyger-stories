@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toyger Stories</title>
+    <script>
+      // SPA fallback: redirect 404 to index with path preserved
+      // Works for both root hosting and GitHub Pages (/toyger-stories/)
+      var basePath = '/toyger-stories';
+      var path = window.location.pathname;
+      var isGitHubPages = path.startsWith(basePath);
+      var relativePath = isGitHubPages ? path.slice(basePath.length) : path;
+      
+      if (relativePath !== '/' && relativePath !== '/index.html' && relativePath !== '') {
+        sessionStorage.setItem('redirect', relativePath);
+        window.location.replace(isGitHubPages ? basePath + '/' : '/');
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
